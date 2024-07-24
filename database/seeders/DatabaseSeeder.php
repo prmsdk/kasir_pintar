@@ -51,16 +51,10 @@ class DatabaseSeeder extends Seeder
             ShieldSeeder::class,
         ]);
 
-        $roleDirektur = Role::create(['name' => 'Direktur']);
-        $roleFinance = Role::create(['name' => 'Finance']);
-        $roleStaff = Role::create(['name' => 'Staff']);
-
         $userDirektur->assignRole('Direktur');
         $userFinance->assignRole('Finance');
         $userStaff->assignRole('Staff');
 
         $userDirektur->assignRole('super_admin');
-        $userFinance->assignRole('panel_user');
-        $userStaff->assignRole('panel_user');
     }
 }
